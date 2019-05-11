@@ -3,10 +3,10 @@ git:
 sudo: false
 language: node_js
 node_js:
-  - '8'
+  - '10'
 cache:
-  yarn: true
+  npm: true
   directories:
     - node_modules
 script:
-  - yarn test
+  - npm test

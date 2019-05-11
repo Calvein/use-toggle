@@ -10,8 +10,8 @@ function render(val) {
 
 test(t => {
   function Component() {
-    let { isOpen, open, close, toggle } = useToggle(true);
-    return h('button', { open, close, toggle, chilren: isOpen });
+    let { isOn, on, off, toggle } = useToggle(true);
+    return h('button', { on, off, toggle, chilren: isOn });
   }
 
   let button = render(h(Component));
@@ -20,8 +20,8 @@ test(t => {
   t.is(button.toJSON().props.chilren, true);
   button.toJSON().props.toggle();
   t.is(button.toJSON().props.chilren, false);
-  button.toJSON().props.open();
+  button.toJSON().props.on();
   t.is(button.toJSON().props.chilren, true);
-  button.toJSON().props.close();
+  button.toJSON().props.off();
   t.is(button.toJSON().props.chilren, false);
 });

@@ -1,25 +1,26 @@
 'use strict';
 let { useState } = require('react');
 
-function useInputValue(defaultIsOpen) {
-  let [isOpen, setIsOpen] = useState(defaultIsOpen);
+function useInputValue(defaultIsOn) {
+  let [isOn, setIsOn] = useState(defaultIsOn);
 
-  function open() {
-    setIsOpen(true);
+  function on() {
+    setIsOn(true);
   }
 
-  function close() {
-    setIsOpen(false);
+  function off() {
+    setIsOn(false);
   }
 
   function toggle() {
-    setIsOpen(!isOpen);
+    setIsOn(!isOn);
   }
 
   return {
-    isOpen,
-    open,
-    close,
+    isOn,
+    isOff: !isOn,
+    on,
+    off,
     toggle,
   };
 }

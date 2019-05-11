@@ -1,8 +1,9 @@
 interface Toggle {
-  isOpen: boolean,
-  open(): void,
-  close(): void,
+  isOn: boolean,
+  isOff: boolean,
+  on(): void,
+  off(): void,
   toggle(): void,
 }
 
-export default function useToggle(defaultIsOpen?: boolean): Toggle;
+export default function useToggle(defaultIsOn?: boolean): Toggle;

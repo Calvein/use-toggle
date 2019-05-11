@@ -1,28 +1,24 @@
-# `@rehooks/toggle`
+# `use-toggle`
 
-> React hook for toggling things
-
-> **Note:** This is using the new [React Hooks API Proposal](https://reactjs.org/docs/hooks-intro.html)
-> which is subject to change until React 16.7 final.
->
-> You'll need to install `react`, `react-dom`, etc at `^16.7.0-alpha.0`
+> React hook for toggling
 
 ## Install
 
 ```sh
-yarn add @rehooks/toggle
+npm install use-toggle
 ```
 
 ## Usage
 
 ```js
-import useToggle from '@rehooks/toggle';
+import useToggle from 'use-toggle';
 
-function MyComponent() {
-  let { isOpen, open, close, toggle } = useToggle();
+const MyComponent = () => {
+  const { isOn, isOff, on, off, toggle } = useToggle();
+
   return (
     <button onClick={toggle}>
-      is {isOpen ? 'opened' : 'closed'}
+      is {isOn ? 'on' : 'off'}
     </button>
   );
 }
