@@ -1,5 +1,5 @@
 {
-  "name": "use-toggle",
+  "name": "react-use-toggle",
   "version": "1.0.0",
   "description": "React hook for toggling things",
   "main": "index.js",
