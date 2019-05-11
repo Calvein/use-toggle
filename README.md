@@ -1,17 +1,17 @@
-# `react-use-toggle`
+# `@calvein/use-toggle`
 
 > React hook for toggling
 
 ## Install
 
 ```sh
-npm install react-use-toggle
+npm install @calvein/use-toggle
 ```
 
 ## Usage
 
 ```js
-import useToggle from 'react-use-toggle';
+import useToggle from '@calvein/use-toggle';
 
 const MyComponent = () => {
   const { isOn, isOff, on, off, toggle } = useToggle();
